@@ -1,0 +1,99 @@
+:root {
+    --bgcolor: rgba(255, 232, 236, 0.692);
+    --bgcolor2: red;
+    --ftsize: 24px;
+    --color1: rgb(250, 238, 211);
+    --color2: rgb(179, 33, 33);
+
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--bgcolor);
+    height: 100vh;
+    margin: 0px;
+    position: relative;
+
+    animation: cchange;
+    animation-duration: 100ms;
+    animation-iteration-count: infinite;
+}
+
+#bg {
+    width: 100%;
+    background-color: rgb(49, 175, 175);
+}
+
+#container0 {
+    background-color: var(--bgcolor2);
+    font-size: var(--ftsize);
+    width: 100px;
+    height: 100px;
+    border-radius: 3px;
+    border: 2px solid gray;
+    margin: 5px auto;
+
+    animation: height;
+    animation-duration: 100ms;
+    animation-iteration-count: infinite;
+}
+
+#container {
+    background-color: var(--bgcolor2);
+    font-size: var(--ftsize);
+    width: 0px;
+    height: 100px;
+    border-radius: 3px;
+    border: 2px solid gray;
+
+    animation: width;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes width {
+    0% {
+        width: 0%;
+    }
+
+    50% {
+        width: 100%;
+    }
+}
+
+@keyframes height {
+    0% {
+        height: 100px;
+        /* background-color: rgb(28, 197, 36); */
+    }
+
+    50% {
+        height: 75vh;
+        /* background-color: rgb(51, 137, 250); */
+    }
+}
+
+@keyframes cchange {
+    0% {
+        background: linear-gradient(to right, var(--color1), var(--color2), var(--color1));
+    }
+
+    25% {
+        background: linear-gradient(to bottom, var(--color1), var(--color2), var(--color1));
+    }
+
+    50% {
+        background: linear-gradient(to left, var(--color1), var(--color2), var(--color1));
+    }
+
+    75% {
+        background: linear-gradient(to top, var(--color1), var(--color2), var(--color1));
+    }
+
+    100% {
+        background: linear-gradient(to right, var(--color1), var(--color2), var(--color1));
+    }
+}
